@@ -1,8 +1,7 @@
 :root {
     --carminBlue: #80CCE6;
-    --lemonYellow: #FFF5B3;
-    --rawSienna: #B85E00;
-    --rawSiennaOpaque: rgba(184, 94, 0, 0.8);
+    --lemonYellow: rgba(255, 245, 179, 0.2);
+    --rawSienna: rgba(184, 94, 0, 0.2);
     --grenadinePink: #FF616B;
     --text-color-dark: #333;
     --font-primary: 'Roboto', sans-serif;
@@ -57,29 +56,25 @@ nav ul li a:focus {
 
 section {
     padding: 60px 20px;
-    margin-top: 70px; /* Adjust based on header height */
+    box-shadow: var(--section-shadow);
 }
 
 #welcome {
     background-color: var(--lemonYellow);
-    box-shadow: var(--section-shadow);
 }
 
 #about {
-    background-color: var(--rawSiennaOpaque);
+    background-color: var(--rawSienna);
     color: white;
-    box-shadow: var(--section-shadow);
 }
 
 #team {
     background-color: var(--lemonYellow);
-    box-shadow: var(--section-shadow);
 }
 
 #contact {
-    background-color: var(--rawSiennaOpaque);
+    background-color: var(--rawSienna);
     color: white;
-    box-shadow: var(--section-shadow);
 }
 
 form#contact-form {
@@ -123,7 +118,6 @@ footer {
     color: white;
     text-align: center;
     padding: 1rem;
-    box-shadow: var(--section-shadow);
     position: relative;
     bottom: 0;
     width: 100%;
