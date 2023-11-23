@@ -1,11 +1,12 @@
 :root {
-    --primary-font: 'Open Sans', sans-serif;
-    --heading-weight: 700;
-    --text-weight: 400;
-    --background-color: #f8f8f8;
-    --primary-color: #5b63d6;
-    --text-color: #333;
-    --nav-height: 60px;
+    --carminBlue: #80CCE6;
+    --lemonYellow: #FFF5B3;
+    --rawSienna: #B85E00;
+    --rawSiennaOpaque: rgba(184, 94, 0, 0.8);
+    --grenadinePink: #FF616B;
+    --text-color-dark: #333;
+    --font-primary: 'Roboto', sans-serif;
+    --section-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 * {
@@ -15,16 +16,16 @@
 }
 
 body {
-    font-family: var(--primary-font);
+    font-family: var(--font-primary);
     line-height: 1.6;
-    color: var(--text-color);
-    background-color: var(--background-color);
+    color: var(--text-color-dark);
 }
 
 header {
-    background-color: var(--primary-color);
+    background-color: var(--grenadinePink);
     color: white;
-    padding: 0 2em;
+    padding: 1rem 2rem;
+    box-shadow: var(--section-shadow);
     position: fixed;
     width: 100%;
     top: 0;
@@ -35,7 +36,6 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: var(--nav-height);
 }
 
 nav ul {
@@ -56,8 +56,30 @@ nav ul li a:focus {
 }
 
 section {
-    padding: 60px;
-    margin-top: var(--nav-height);
+    padding: 60px 20px;
+    margin-top: 70px; /* Adjust based on header height */
+}
+
+#welcome {
+    background-color: var(--lemonYellow);
+    box-shadow: var(--section-shadow);
+}
+
+#about {
+    background-color: var(--rawSiennaOpaque);
+    color: white;
+    box-shadow: var(--section-shadow);
+}
+
+#team {
+    background-color: var(--lemonYellow);
+    box-shadow: var(--section-shadow);
+}
+
+#contact {
+    background-color: var(--rawSiennaOpaque);
+    color: white;
+    box-shadow: var(--section-shadow);
 }
 
 form#contact-form {
@@ -85,7 +107,7 @@ form button {
     width: 100%;
     padding: 10px;
     border: none;
-    background-color: var(--primary-color);
+    background-color: var(--carminBlue);
     color: white;
     cursor: pointer;
     transition: opacity 0.3s;
@@ -97,11 +119,26 @@ form button:focus {
 }
 
 footer {
-    background-color: var(--primary-color);
+    background-color: var(--grenadinePink);
     color: white;
     text-align: center;
-    padding: 10px 0;
+    padding: 1rem;
+    box-shadow: var(--section-shadow);
     position: relative;
     bottom: 0;
     width: 100%;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li a {
+        padding: 10px 20px;
+    }
+
+    section {
+        padding: 30px 20px;
+    }
 }
