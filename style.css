@@ -57,6 +57,7 @@ nav ul li a:focus {
 
 section {
     padding: 60px;
+    margin-top: var(--nav-height);
 }
 
 form#contact-form {
@@ -92,4 +93,15 @@ form button {
 
 form button:hover,
 form button:focus {
-    opacity: 
+    opacity: 0.7;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
